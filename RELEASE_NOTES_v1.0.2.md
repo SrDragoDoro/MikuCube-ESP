@@ -30,7 +30,12 @@ Se comprobó en el cubo físico la ejecución exacta de un ciclo de tres reprodu
 
 ## Instalación
 
-Descarga el archivo **MikuCube-v1.0.2.apk** a continuación e instálalo sobre la versión instalada actualmente.
+Descarga el archivo **MikuCube-v1.0.2.apk** (o **MikuCube-v1.0.2-ES.apk**) a continuación.
+
+> [!IMPORTANT]
+> **Si ya tenías instalada la versión previa en inglés:**
+> Android requiere que desinstales la versión anterior antes de instalar esta versión en español, debido a que esta edición cuenta con una firma digital propia para los paquetes localizados (`INSTALL_FAILED_UPDATE_INCOMPATIBLE`). Una vez desinstalada la app anterior, la versión en español se instalará y abrirá directamente en español.
+
 El paquete APK es compatible con las arquitecturas arm64-v8a, armeabi-v7a, x86 y x86_64. Para recibir actualizaciones automáticas,
 añade [este repositorio](https://github.com/SrDragoDoro/MikuCube-ESP) a Obtainium.
 
@@ -45,14 +50,14 @@ añade [este repositorio](https://github.com/SrDragoDoro/MikuCube-ESP) a Obtaini
 Se superaron satisfactoriamente las 26 pruebas automáticas, las validaciones de tipos en TypeScript y la compilación firmada de producción.
 Las herramientas experimentales de sondeo de reloj, barrido de alarmas y pruebas de animación se mantienen ocultas en este paquete de lanzamiento.
 
-SHA-256 del APK:
+SHA-256 del APK en Español (`MikuCube-v1.0.2.apk` / `MikuCube-v1.0.2-ES.apk`):
+
+```text
+23001be8789aec248c746b5277303a55c362c18371e5bc3e17742bc193182e51
+```
+
+SHA-256 del APK original en Inglés (`MikuCube-v1.0.2-EN.apk`):
 
 ```text
 04244ae9be66ed01b99115df018c91d291604e1d84b60fcab419343631edf1de
-```
-
-SHA-256 del certificado de firma (sin modificaciones):
-
-```text
-12496329e6955991105e1057954ea328198950b06e823fc8415bb30a5d627289
 ```

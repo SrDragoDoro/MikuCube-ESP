@@ -1,0 +1,15 @@
+A:\Proyectos\App\MikuCube-ESP\tools\ApkPatcher\obj\Debug\net10.0\ApkPatcher.GeneratedMSBuildEditorConfig.editorconfig
+A:\Proyectos\App\MikuCube-ESP\tools\ApkPatcher\obj\Debug\net10.0\ApkPatcher.AssemblyInfoInputs.cache
+A:\Proyectos\App\MikuCube-ESP\tools\ApkPatcher\obj\Debug\net10.0\ApkPatcher.AssemblyInfo.cs
+A:\Proyectos\App\MikuCube-ESP\tools\ApkPatcher\obj\Debug\net10.0\ApkPatcher.csproj.CoreCompileInputs.cache
+A:\Proyectos\App\MikuCube-ESP\tools\ApkPatcher\obj\Debug\net10.0\ApkPatcher.sourcelink.json
+A:\Proyectos\App\MikuCube-ESP\tools\ApkPatcher\bin\Debug\net10.0\ApkPatcher.exe
+A:\Proyectos\App\MikuCube-ESP\tools\ApkPatcher\bin\Debug\net10.0\ApkPatcher.deps.json
+A:\Proyectos\App\MikuCube-ESP\tools\ApkPatcher\bin\Debug\net10.0\ApkPatcher.runtimeconfig.json
+A:\Proyectos\App\MikuCube-ESP\tools\ApkPatcher\bin\Debug\net10.0\ApkPatcher.dll
+A:\Proyectos\App\MikuCube-ESP\tools\ApkPatcher\bin\Debug\net10.0\ApkPatcher.pdb
+A:\Proyectos\App\MikuCube-ESP\tools\ApkPatcher\obj\Debug\net10.0\ApkPatcher.dll
+A:\Proyectos\App\MikuCube-ESP\tools\ApkPatcher\obj\Debug\net10.0\refint\ApkPatcher.dll
+A:\Proyectos\App\MikuCube-ESP\tools\ApkPatcher\obj\Debug\net10.0\ApkPatcher.pdb
+A:\Proyectos\App\MikuCube-ESP\tools\ApkPatcher\obj\Debug\net10.0\ApkPatcher.genruntimeconfig.cache
+A:\Proyectos\App\MikuCube-ESP\tools\ApkPatcher\obj\Debug\net10.0\ref\ApkPatcher.dll
