@@ -53,7 +53,13 @@ Las herramientas experimentales de sondeo de reloj, barrido de alarmas y pruebas
 SHA-256 del APK en Español (`MikuCube-v1.0.2.apk` / `MikuCube-v1.0.2-ES.apk`):
 
 ```text
-23001be8789aec248c746b5277303a55c362c18371e5bc3e17742bc193182e51
+3e9fd6509cfb9c99232ccd4545f85b0527a1a6064423fcdc450ad55647a6db0d
+```
+
+SHA-256 del certificado de firma (MikuCube-ESP):
+
+```text
+880b27af588a18b9cbedc802971384cf8624f9dbab7d64f418d0bafbae12bea3
 ```
 
 SHA-256 del APK original en Inglés (`MikuCube-v1.0.2-EN.apk`):
