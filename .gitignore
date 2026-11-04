@@ -4,3 +4,7 @@
 *.apk
 *.aab
 *.idsig
+
+# Build output
+tools/ApkPatcher/bin/
+tools/ApkPatcher/obj/

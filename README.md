@@ -20,10 +20,11 @@ por Bluetooth.
 
 La aplicación no está en Google Play, por lo que debes instalar el APK manualmente.
 
-1. Descarga el archivo `.apk` desde [**Releases (Lanzamientos)**](../../releases/latest).
-2. Ábrelo. Android advertirá que la fuente no es de confianza — pulsa en **Ajustes** (**Settings**) en ese
+1. Descarga el archivo **`MikuCube-v1.0.2-ES.apk`** (o `MikuCube-v1.0.2.apk`) desde [**Releases (Lanzamientos)**](../../releases/latest).
+2. **Si ya tenías instalada la versión previa en inglés:** Desinstálala primero de tu teléfono. Android bloquea la actualización directa entre paquetes firmados con certificados distintos (`INSTALL_FAILED_UPDATE_INCOMPATIBLE`).
+3. Abre el archivo descargado. Android advertirá que la fuente no es de confianza — pulsa en **Ajustes** (**Settings**) en ese
    aviso y autoriza a tu navegador (o aplicación de Archivos) a instalar aplicaciones desconocidas.
-3. Instala y abre la app.
+4. Instala y abre la app. Al abrirla, la interfaz se iniciará directamente en español y la opción en ajustes figurará como **Español**.
 
 **"Play Protect no reconoce esta aplicación"** — comportamiento esperado para cualquier app instalada
 fuera de Play Store. Pulsa en **Más detalles → Instalar de todas formas** (**More details → Install anyway**).
