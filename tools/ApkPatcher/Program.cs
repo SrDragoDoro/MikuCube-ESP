@@ -339,8 +339,214 @@ class Program
         }
         Console.WriteLine($"Successfully patched {patchedCount} UI strings in Hermes bytecode.");
 
-        // 5. CRITICAL INTEGRITY ASSERTIONS
-        Console.WriteLine("\n[Hermes Integrity Verification] Verifying critical JavaScript identifiers...");
+        // 5. Dynamic Memory Pool for Hermes String Table Redirections
+        Console.WriteLine("\n[5.1] Initializing Hermes String Pool from all isolated strings >= 40 bytes...");
+        var poolRegions = new List<(int Offset, int MaxSize)>();
+
+        // Build list of target strings we want to translate (by exact English value!)
+        var targetTranslations = new Dictionary<string, string>
+        {
+            // Face Studio tags (Exact requested translations!)
+            { "Breakfast", "Desayuno" },
+            { "Brush Teeth", "Cepillar dientes" },
+            { "Studying", "Estudiando" },
+            { "Grinding", "Trabajando duro" },
+            { "Milk Tea", "Te con leche" },
+            { "Slacking Off", "Holgazaneando" },
+            { "Sleepy", "Con sueno" },
+            { "Eating Rice", "Comiendo arroz" },
+            { "Happy", "Feliz" },
+            { "Popcorn", "Palomitas" },
+            { "Fell Asleep", "Dormido" },
+            { "Power Off", "Apagar" },
+            { "Power On", "Encender" },
+            { "Singing", "Cantando" },
+
+            // Sidebar Menu
+            { "Face Studio", "Estudio de caras" },
+            { "Animation Selection", "Seleccion de animaciones" },
+            { "Wake Alarm", "Alarma" },
+            { "Danmaku", "Danmaku" },
+            { "System Settings", "Ajustes del sistema" },
+            { "Settings", "Ajustes" },
+            { "Menu", "Menu" },
+            { "Disconnect", "Desconectar" },
+            { "Connect", "Conectar" },
+
+            // Settings Screen
+            { "English", "Espanol" },
+            { "Share device data", "Compartir datos" },
+            { "Copy device data", "Copiar datos del cubo" },
+            { "Change Device", "Cambiar dispositivo" },
+
+            // Danmaku
+            { "Add Custom Danmaku", "Anadir Danmaku" },
+            { "Danmaku phrase", "Frase de Danmaku" },
+            { "Custom danmaku", "Danmaku propio" },
+            { "Danmaku saved", "Danmaku guardado" },
+            { "Edit Danmaku Phrase", "Editar frase Danmaku" },
+            { "Use large text danmaku", "Danmaku texto grande" },
+            { "Invalid Danmaku", "Danmaku no valido" },
+            { "No readable danmaku file", "Sin archivo danmaku" },
+
+            // Alarms & Animations
+            { "Alarms", "Alarmas" },
+            { "Alarm name", "Nombre de alarma" },
+            { "Alarm Name", "Nombre de alarma" },
+            { "Add alarm", "Anadir alarma" },
+            { "Edit alarm", "Editar alarma" },
+            { "No Alarm", "Sin alarma" },
+            { "No alarm clock", "Sin alarmas activas" },
+            { "Repeat daily", "Repetir a diario" },
+            { "Repeat", "Repetir" },
+            { "Late Night", "Madrugada" },
+            { "Night", "Noche" },
+            { "Morning", "Manana" },
+            { "Early Hours", "Primeras horas" },
+            { "Animation", "Animacion" },
+
+            // Connection & General UI
+            { "Not Connected", "No conectado" },
+            { "Connected", "Conectado" },
+            { "Connecting", "Conectando" },
+            { "Connecting to device...", "Conectando al cubo..." },
+            { "Done", "Listo" },
+            { "Face saved", "Cara guardada" },
+            { "Save", "Guardar" },
+            { "System Version", "Version del sistema" },
+            { "Unknown Device", "Dispositivo desconocido" },
+            { "Cancel", "Cancelar" },
+            { "Add", "Anadir" },
+
+            // Subtitles and guidance
+            { "Change faces here first after connecting. Use the side menu for everything else.", "Cambia caras tras conectar. Usa el menu lateral para el resto." },
+            { "This cube is missing schedule timing. Restore default times to enable editing. Animation selections are kept; custom time ranges are reset.", "Falta horario en el cubo. Restablece horas para editar. Se mantienen las animaciones elegidas." },
+            { "Place your MikuCube nearby, then tap Connect", "Acerca tu MikuCube y pulsa Conectar" },
+            { "Connect to the cube first", "Conecta al cubo primero" },
+            { "Saves when connected", "Guarda al conectar" },
+            { "Alarms saved", "Alarmas guardadas" },
+            { "* Alarms sync to the device immediately", "* Las alarmas se sincronizan de inmediato" },
+            { "No alarms yet — add one below", "Sin alarmas aun — anade una abajo" },
+            { "Animations saved", "Animaciones guardadas" },
+            { "* 1-5 animations per time slot", "* 1-5 animaciones por horario" },
+            { "Delete alarm", "Eliminar alarma" },
+            { "Pick at least one animation", "Elige al menos una animacion" },
+            { "Remember to drink water", "Recuerda beber agua" },
+            { "Turn off lights and lock up", "Apagar luces y salir" },
+
+            // Dialog & Button texts
+            { "Confirm", "Confirmar" },
+            { "Crop & Preview", "Recortar y vista previa" },
+            { "Could not connect — make sure the cube is nearby and try again", "No se pudo conectar — acerca el cubo e intentalo de nuevo" },
+            { "Loaded the cube’s current settings", "Ajustes del cubo cargados" }
+        };
+
+        // Find ALL 100% isolated strings in the bundle (>= 40 bytes) that are not target translations
+        var targetSet = new HashSet<string>(targetTranslations.Keys);
+        foreach (var e in allEntries)
+        {
+            if (e.ByteLen < 40) continue;
+            if (targetSet.Contains(e.Value)) continue;
+
+            int startA = e.StorageOffset;
+            int endA = e.StorageOffset + e.ByteLen;
+            bool overlaps = false;
+            foreach (var other in allEntries)
+            {
+                if (other.Index == e.Index) continue;
+                int startB = other.StorageOffset;
+                int endB = other.StorageOffset + other.ByteLen;
+                if (Math.Max(startA, startB) < Math.Min(endA, endB))
+                {
+                    overlaps = true;
+                    break;
+                }
+            }
+
+            if (!overlaps)
+            {
+                poolRegions.Add((e.StorageOffset, e.ByteLen));
+            }
+        }
+
+        int totalPoolCapacity = 0;
+        foreach (var r in poolRegions) totalPoolCapacity += r.MaxSize;
+        Console.WriteLine($"Initialized string pool with {poolRegions.Count} isolated regions, total capacity: {totalPoolCapacity} bytes.");
+
+        int curRegion = 0;
+        int curOffset = 0;
+
+        (int NewOffset, int NewLen, bool IsUtf16) AllocatePool(string text, bool isUtf16)
+        {
+            byte[] bytes = isUtf16 ? Encoding.Unicode.GetBytes(text) : Encoding.ASCII.GetBytes(text);
+            int charLen = text.Length;
+
+            while (curRegion < poolRegions.Count)
+            {
+                var r = poolRegions[curRegion];
+                if (curOffset + bytes.Length <= r.MaxSize)
+                {
+                    int storageAbs = r.Offset + curOffset;
+                    Array.Copy(bytes, 0, bundleBytes, storageOffset + storageAbs, bytes.Length);
+                    curOffset += bytes.Length;
+                    return (storageAbs, charLen, isUtf16);
+                }
+                curRegion++;
+                curOffset = 0;
+            }
+            throw new Exception("String pool exhausted!");
+        }
+
+        Console.WriteLine($"\n[5.2] Applying {targetTranslations.Count} UI Redirections via SmallStringTable...");
+        var appliedRedirections = new Dictionary<int, (string Orig, string Rep)>();
+
+        foreach (var kvp in targetTranslations)
+        {
+            string origText = kvp.Key;
+            string repText = kvp.Value;
+
+            // Find all entries with exact value matching origText
+            var matches = allEntries.FindAll(e => e.Value == origText);
+            if (matches.Count == 0)
+            {
+                Console.WriteLine($" [REDIRECT WARNING]: \"{origText}\" not found in Hermes bundle!");
+                continue;
+            }
+
+            foreach (var match in matches)
+            {
+                var alloc = AllocatePool(repText, match.IsUtf16);
+                uint newEntryVal = (uint)((alloc.NewLen << 24) | (alloc.NewOffset << 1) | (alloc.IsUtf16 ? 1 : 0));
+                BitConverter.GetBytes(newEntryVal).CopyTo(bundleBytes, smallTableOffset + match.Index * 4);
+
+                appliedRedirections[match.Index] = (origText, repText);
+                Console.WriteLine($" [REDIRECT #{match.Index,-4}]: \"{origText}\" -> \"{repText}\" (pool offset {alloc.NewOffset}, len {alloc.NewLen}, utf16={alloc.IsUtf16})");
+            }
+        }
+        Console.WriteLine($"Successfully redirected {appliedRedirections.Count} UI string entries in Hermes SmallStringTable.");
+
+        Console.WriteLine("\n[5.3] Verifying read-back of all redirected strings from bundle bytes...");
+        foreach (var kvp in appliedRedirections)
+        {
+            int sId = kvp.Key;
+            string expected = kvp.Value.Rep;
+
+            uint entryVal = BitConverter.ToUInt32(bundleBytes, smallTableOffset + sId * 4);
+            int isUtf16 = (int)(entryVal & 1);
+            int offset = (int)((entryVal >> 1) & 0x7FFFFF);
+            int length = (int)((entryVal >> 24) & 0xFF);
+
+            int byteLen = isUtf16 == 0 ? length : length * 2;
+            string actual = isUtf16 == 0
+                ? Encoding.ASCII.GetString(bundleBytes, storageOffset + offset, length)
+                : Encoding.Unicode.GetString(bundleBytes, storageOffset + offset, byteLen);
+
+            if (actual != expected)
+            {
+                throw new Exception($"FATAL: Redirected string #{sId} verification failed! Expected '{expected}', Got '{actual}'");
+            }
+        }
+        Console.WriteLine($"  ✔ All {appliedRedirections.Count} redirected strings verified successfully in Hermes SmallStringTable!");
 
         void AssertIdentifier(int id, string expected)
         {

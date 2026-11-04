@@ -4,6 +4,13 @@ los que facilitaron volcados de diagnóstico de sus dispositivos y colaboraron p
 
 Instala esta versión sobre la v1.0.1 para mantener tu cubo emparejado y tus configuraciones en la app.
 
+## Traducción completa al español
+
+Esta compilación v1.0.2-ES incorpora la traducción íntegra de la interfaz de usuario mediante reescritura segura de la tabla de cadenas de Hermes Bytecode (`SmallStringTable`) con preservación estricta de identificadores internos:
+- **Tarjetas de Face Studio (Estudio de caras):** Desayuno (*Breakfast*), Cepillar dientes (*Brush Teeth*), Estudiando (*Studying*), Trabajando duro (*Grinding*), Té con leche (*Milk Tea*), Holgazaneando (*Slacking Off*), Con sueño (*Sleepy*), Comiendo arroz (*Eating Rice*), Feliz (*Happy*), Palomitas (*Popcorn*), Dormido (*Fell Asleep*), Apagar (*Power Off*), Encender (*Power On*), Cantando (*Singing*).
+- **Menú lateral:** Estudio de caras (*Face Studio*), Selección de animaciones (*Animation Selection*), Alarma (*Wake Alarm*), Danmaku, Ajustes del sistema (*System Settings*), Ajustes (*Settings*), Desconectar (*Disconnect*), Conectar (*Connect*).
+- **Ajustes y Danmaku:** Español (*English*), Compartir datos (*Share device data*), Copiar datos del cubo (*Copy device data*), Cambiar dispositivo (*Change Device*), Frase de Danmaku (*Danmaku phrase*), Danmaku propio (*Custom danmaku*), Danmaku guardado (*Danmaku saved*), Editar frase Danmaku (*Edit Danmaku Phrase*), Danmaku texto grande (*Use large text danmaku*), y todos los subtítulos y diálogos de asistencia.
+
 ## Programación de animaciones
 
 - **Animation Selection (Selección de animaciones) vuelve a ser editable.** Selecciona de 1 a 5 animaciones por intervalo horario.
@@ -53,7 +60,7 @@ Las herramientas experimentales de sondeo de reloj, barrido de alarmas y pruebas
 SHA-256 del APK en Español (`MikuCube-v1.0.2.apk` / `MikuCube-v1.0.2-ES.apk`):
 
 ```text
-a465ce190ffd5dde0a8a4f7553d8676adf3f0aaf6c826d8267b5db1cac83bdb3
+d4db19ddece958093706c79e26c44073cbe176b6f38d5617fae04fd4f5e4b0b6
 ```
 
 SHA-256 del certificado de firma (MikuCube-ESP):
