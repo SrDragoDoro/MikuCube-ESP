@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- App & Connection -->
+    <string name="app_name">Hatsune Miku Cube</string>
+    <string name="status_connected">Conectado</string>
+    <string name="status_connecting">Conectando…</string>
+    <string name="status_not_connected">No conectado</string>
+    <string name="status_disconnecting">Desconectando…</string>
+    <string name="btn_connect">Conectar</string>
+    <string name="btn_disconnect">Desconectar</string>
+    <string name="btn_scan">Escanear</string>
+    <string name="scan_title">Encuentra tu Miku Cube</string>
+    <string name="scan_subtitle">Busca dispositivos Bluetooth cercanos y pulsa para seleccionar</string>
+    <string name="scan_tap_to_select">Pulsa para seleccionar tu Miku Cube</string>
+    <string name="scan_likely_your_cube">PROBABLEMENTE TU CUBO</string>
+    <string name="scan_show_all_bt">Mostrar todos los dispositivos Bluetooth</string>
+    <string name="scan_open_back_reminder">Asegúrate de que el cubo esté encendido con la tapa trasera abierta para permitir la detección por Bluetooth.</string>
+    <string name="btn_add_to_bluetooth">Añadir a Bluetooth</string>
+    <string name="btn_open_bt_settings">Abrir ajustes de Bluetooth</string>
+
+    <!-- Navigation Menu -->
+    <string name="menu_title">Menú</string>
+    <string name="menu_face_studio">Estudio de caras</string>
+    <string name="menu_animation_selection">Selección de animaciones</string>
+    <string name="menu_wake_alarm">Alarma de despertar</string>
+    <string name="menu_danmaku">Danmaku</string>
+    <string name="menu_system_settings">Ajustes del sistema</string>
+    <string name="menu_settings">Ajustes</string>
+
+    <!-- Face Studio -->
+    <string name="face_studio_title">Estudio de caras</string>
+    <string name="face_studio_subtitle">Cambia las caras aquí primero tras conectar. Usa el menú lateral para todo lo demás.</string>
+    <string name="btn_upload_custom_image">Subir imagen personalizada</string>
+    <string name="face_custom_saved">¡Imagen personalizada guardada! Estableciendo como cara…</string>
+    <string name="face_custom_done">¡Listo! Tu cara personalizada se ha configurado.</string>
+    <string name="face_custom_remove_hint">Mantén pulsada tu imagen personalizada para eliminarla de la vista previa de la app (permanecerá en el cubo hasta que subas otra).</string>
+    <string name="playback_count_title">Repeticiones de animación</string>
+    <string name="playback_count_hint">Elige de 1 a 1000 reproducciones, o 0 para reproducción ilimitada</string>
+    <string name="playback_unlimited">Ilimitado (0)</string>
+
+    <!-- Face Names -->
+    <string name="face_breakfast">Desayuno</string>
+    <string name="face_brush_teeth">Cepillarse los dientes</string>
+    <string name="face_studying">Estudiando</string>
+    <string name="face_grinding">Trabajando duro</string>
+    <string name="face_milk_tea">Té de burbujas</string>
+    <string name="face_slacking_off">Holgazaneando</string>
+    <string name="face_sleepy">Somnolienta</string>
+    <string name="face_eating_rice">Comiendo arroz</string>
+    <string name="face_hungry">Hambrienta</string>
+    <string name="face_happy">Feliz</string>
+    <string name="face_popcorn">Palomitas</string>
+    <string name="face_fell_asleep">Dormida</string>
+    <string name="face_fully_charged">Carga completa</string>
+
+    <!-- Animation Selection -->
+    <string name="anim_selection_title">Selección de animaciones</string>
+    <string name="anim_view_only_title">Modo de solo lectura temporal</string>
+    <string name="anim_view_only_desc">El cubo parece reproducir siempre la primera franja (Amanecer) en vez de basarse en la hora actual. Hasta comprender la causa, el guardado está desactivado para evitar alterar tu configuración.</string>
+    <string name="anim_slot_limit">* 1 a 5 animaciones por franja horaria</string>
+    <string name="anim_sync_from_device">Sincronizar desde dispositivo</string>
+    <string name="anim_restore_default_times">Restaurar horas predeterminadas</string>
+    <string name="anim_missing_timing_notice">A este cubo le faltan parámetros de horario. Restaura las horas predeterminadas para habilitar la edición conservando tus selecciones.</string>
+    <string name="slot_dawn">Amanecer (06:00 - 08:00)</string>
+    <string name="slot_morning">Mañana (08:00 - 12:00)</string>
+    <string name="slot_noon">Mediodía (12:00 - 14:00)</string>
+    <string name="slot_afternoon">Tarde (14:00 - 18:00)</string>
+    <string name="slot_evening">Anochecer (18:00 - 20:00)</string>
+    <string name="slot_night">Noche (20:00 - 22:00)</string>
+
+    <!-- Wake Alarm -->
+    <string name="alarm_title">Alarma de despertar</string>
+    <string name="alarm_sync_notice">* Las alarmas se sincronizan con el dispositivo inmediatamente</string>
+    <string name="alarm_btn_add">Añadir</string>
+    <string name="alarm_new_title">Nueva alarma</string>
+    <string name="alarm_edit_title">Editar alarma</string>
+    <string name="alarm_label_time">Hora</string>
+    <string name="alarm_label_repeat">Repetir</string>
+    <string name="alarm_every_day">Todos los días</string>
+    <string name="alarm_label_name">Nombre de alarma</string>
+    <string name="alarm_placeholder_name">Toca para configurar</string>
+    <string name="alarm_label_danmaku">Frase de Danmaku</string>
+    <string name="alarm_placeholder_danmaku">Toca para configurar</string>
+    <string name="alarm_btn_use_clock">Usar próxima alarma del Reloj</string>
+    <string name="alarm_btn_delete">Eliminar alarma</string>
+
+    <!-- Danmaku -->
+    <string name="danmaku_title">Danmaku</string>
+    <string name="danmaku_status_saved">Guardado</string>
+    <string name="danmaku_save_hint">* Tras editar los ajustes de danmaku, los cambios se guardan automáticamente.</string>
+    <string name="danmaku_scroll_lyrics">Desplazar letras mientras suena música</string>
+    <string name="danmaku_scroll_lyrics_hint">* Solo funciona con ciertas aplicaciones de música (no compatible con Spotify o YT Music)</string>
+    <string name="danmaku_use_large_text">Usar texto danmaku grande</string>
+    <string name="danmaku_custom">Danmaku personalizado</string>
+    <string name="danmaku_not_created">No creado</string>
+    <string name="danmaku_btn_create">Crear</string>
+    <string name="danmaku_btn_edit">Editar</string>
+    <string name="phrase_drink_water">Recuerda beber agua</string>
+    <string name="phrase_sleep_early">Duérmete temprano</string>
+    <string name="phrase_lights_lock">Apaga las luces y cierra con llave</string>
+
+    <!-- System Settings -->
+    <string name="system_title">Ajustes del sistema</string>
+    <string name="system_read_version_hint">* Lee la versión real directamente del dispositivo</string>
+    <string name="system_version_label">Versión del sistema</string>
+    <string name="system_active_theme_label">Tema activo</string>
+    <string name="system_flash_warning">* Cambiar de tema flashea el firmware (~2MB) — no interrumpas el proceso</string>
+    <string name="system_in_use">En uso</string>
+    <string name="system_btn_switch">Cambiar</string>
+    <string name="system_cube_clock">Reloj del cubo</string>
+    <string name="system_earbuds_hint">Conecta los auriculares en los ajustes de Bluetooth de Android para sincronizar el reloj del cubo con tu teléfono.</string>
+
+    <!-- Settings & Share Data -->
+    <string name="settings_title">Ajustes</string>
+    <string name="settings_language">IDIOMA / LANGUAGE</string>
+    <string name="settings_share_data">COMPARTIR DATOS DEL DISPOSITIVO</string>
+    <string name="settings_share_data_desc">* Solo lectura. Copia los archivos de configuración del cubo al portapapeles para compartirlos en un reporte de error. Nada es modificado en el dispositivo.</string>
+    <string name="btn_copy_device_data">Copiar datos del dispositivo</string>
+    <string name="btn_change_device">Cambiar dispositivo</string>
+    <string name="btn_forget_device">Olvidar dispositivo</string>
+    <string name="toast_data_copied">Datos del dispositivo copiados al portapapeles</string>
+
+    <!-- Common Actions & Errors -->
+    <string name="btn_confirm">Confirmar</string>
+    <string name="btn_cancel">Cancelar</string>
+    <string name="btn_save">Guardar</string>
+    <string name="btn_refresh">Actualizar</string>
+    <string name="err_ble_unsupported">Bluetooth de baja energía (BLE) no es compatible con este dispositivo.</string>
+    <string name="err_ble_powered_off">El Bluetooth está apagado. Por favor, actívalo.</string>
+    <string name="err_connect_failed">No se pudo conectar al cubo. Verifica que la tapa trasera esté abierta y vuelve a intentarlo.</string>
+</resources>

@@ -1,58 +1,46 @@
-<!-- Paste this into the GitHub Release description, then delete this file
-     (or keep it — it's small and documents what shipped). -->
+<!-- Pega este contenido en la descripción del Release en GitHub, y luego elimina este archivo
+     (o consérvalo — ocupa muy poco y documenta lo publicado en esta versión). -->
 
-First public release. An Android app for the Hatsune Miku CUBEFACE that works
-**without the Bilibili app** — no account, no login, no network needed to pair.
+Primer lanzamiento público. Una aplicación de Android para Hatsune Miku CUBEFACE que funciona
+**sin la aplicación de Bilibili** — sin cuenta, sin inicio de sesión y sin requerir conexión a internet para emparejar.
 
-## What works
+## Lo que funciona
 
-- **Face Studio** — change the cube's face, or upload and crop your own image
-- **Wake Alarm** — alarms with repeat days and a scrolling message
-- **Danmaku** — custom scrolling messages and reminders
-- **System Settings** — read the real firmware version, switch themes
-- Face artwork is bundled, so browsing works offline
+- **Face Studio (Estudio de caras)** — cambia la cara del cubo o sube y recorta tu propia imagen personalizada
+- **Wake Alarm (Alarma de despertar)** — alarmas con repetición por días y mensaje desplazable en pantalla
+- **Danmaku** — recordatorios y mensajes de texto desplazables personalizados
+- **System Settings (Ajustes del sistema)** — consulta la versión real de firmware y cambia de temas
+- Las ilustraciones de las caras están integradas en la app, por lo que todo funciona sin conexión
 
-## Known issues
+## Problemas conocidos
 
-- **Animation Selection is view-only.** The cube appears to always play the first
-  slot (Dawn) rather than picking by the time of day, and we don't yet know why.
-  Saving is disabled there so a write can't corrupt your settings.
-  **If your cube is new or you've only used the Bilibili app, please
-  [share your device data](../../#-can-you-help-share-your-cubes-data)** — it
-  would help a lot.
-- **"Scroll lyrics while music plays"** only works with certain music apps.
-  Spotify and YouTube Music don't drive it.
-- Alarms are automatically corrected for a firmware timezone bug, so they ring
-  when you set them. Side effect: they look shifted if viewed in the Bilibili app.
+- **Animation Selection (Selección de animaciones) es de solo lectura.** El cubo parece reproducir siempre la primera franja (Dawn / Amanecer) en lugar de elegir según la hora del día, y aún investigamos el motivo. La función de guardado permanece desactivada en esta sección para evitar que una escritura corrompa tus ajustes.
+  **Si tu cubo es nuevo o solo has utilizado la aplicación de Bilibili, por favor [comparte los datos de tu dispositivo](../../#-can-you-help-share-your-cubes-data)** — será de enorme ayuda.
+- **"Scroll lyrics while music plays" ("Desplazar letras mientras suena música")** solo funciona con ciertas aplicaciones de música compatibles. Spotify y YouTube Music no lo controlan.
+- Las alarmas se corrigen automáticamente para resolver un error de zona horaria en el firmware, de modo que suenan a la hora que tú programas. Efecto secundario: si las consultas desde la app oficial de Bilibili, las horas se mostrarán desplazadas.
 
-## Installing
+## Instalación
 
-Download the APK below and open it. Android will warn that the source isn't
-trusted — allow your browser to install unknown apps. Play Protect may say the
-app is unrecognised; that's expected for anything outside the Play Store.
+Descarga el archivo APK indicado abajo y ábrelo. Android advertirá que el origen no es de confianza — permite a tu navegador instalar aplicaciones desconocidas. Play Protect podría indicar que no reconoce la aplicación; es el comportamiento estándar para archivos instalados fuera de Play Store.
 
-**Open the cube's case before scanning** — it only advertises over Bluetooth
-while open. This is the most common reason a scan finds nothing.
+**Abre la tapa trasera del cubo antes de escanear** — solo emite señal Bluetooth mientras la tapa trasera permanece abierta. Esta es la causa más común por la que un escaneo no detecta el dispositivo.
 
-For automatic updates, add this repo to
-[Obtainium](https://github.com/ImranR98/Obtainium).
+Para recibir actualizaciones automáticas, añade este repositorio a [Obtainium](https://github.com/ImranR98/Obtainium).
 
-## Verifying the download
+## Verificación de la descarga
 
 ```
 SHA-256 (APK):  c2cca359c6fe29a6371d9b8d3289b1ec46207dab2af370df271d236e53539e9d
 ```
 
-Signing certificate (stays the same across all future releases):
+Certificado de firma (se mantendrá idéntico en todos los lanzamientos futuros):
 
 ```
 SHA-256:  12496329e6955991105e1057954ea328198950b06e823fc8415bb30a5d627289
 ```
 
-Check with `apksigner verify --print-certs MikuCube-v1.0.0.apk`. If the
-certificate ever differs, the build did not come from this project.
+Puedes comprobarlo con `apksigner verify --print-certs MikuCube-v1.0.0.apk`. Si el certificado llega a ser diferente, la compilación no procede de este proyecto.
 
 ---
 
-Unofficial and not affiliated with bilibili, Crypton Future Media, or the device
-manufacturer. Use at your own risk, particularly firmware flashing.
+Proyecto no oficial y sin afiliación con bilibili, Crypton Future Media ni con el fabricante del dispositivo. Úsalo bajo tu propia responsabilidad, especialmente las funciones de flasheo de firmware.

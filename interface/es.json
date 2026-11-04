@@ -1,0 +1,162 @@
+{
+  "app": {
+    "name": "Hatsune Miku Cube",
+    "status": {
+      "connected": "Conectado",
+      "connecting": "Conectando...",
+      "notConnected": "No conectado",
+      "disconnecting": "Desconectando..."
+    }
+  },
+  "scan": {
+    "title": "Encuentra tu Miku Cube",
+    "subtitle": "Busca dispositivos Bluetooth cercanos y pulsa para seleccionar",
+    "scanButton": "Escanear",
+    "scanningButton": "Escaneando...",
+    "tapToSelect": "Pulsa para seleccionar tu Miku Cube",
+    "likelyYourCube": "PROBABLEMENTE TU CUBO",
+    "showAllDevices": "Mostrar todos los dispositivos Bluetooth",
+    "openBackReminder": "Asegúrate de que el cubo esté encendido con la tapa trasera abierta para permitir la detección por Bluetooth.",
+    "locationNotice": "Android requiere permisos de ubicación para escanear dispositivos Bluetooth. No se almacena ni comparte ningún dato de ubicación."
+  },
+  "connect": {
+    "title": "Conectar",
+    "connectButton": "Conectar",
+    "disconnectButton": "Desconectar",
+    "addToBluetooth": "Añadir a Bluetooth",
+    "openBluetoothSettings": "Abrir ajustes de Bluetooth",
+    "instructions": "Coloca tu MikuCube cerca y pulsa Conectar.",
+    "pairingPrompt": "Confirma la solicitud de emparejamiento para habilitar la salida de audio de los auriculares."
+  },
+  "menu": {
+    "title": "Menú",
+    "faceStudio": "Estudio de caras",
+    "animationSelection": "Selección de animaciones",
+    "wakeAlarm": "Alarma de despertar",
+    "danmaku": "Danmaku",
+    "systemSettings": "Ajustes del sistema",
+    "settings": "Ajustes"
+  },
+  "faceStudio": {
+    "title": "Estudio de caras",
+    "subtitle": "Cambia las caras aquí primero tras conectar. Usa el menú lateral para todo lo demás.",
+    "uploadCustomImage": "Subir imagen personalizada",
+    "customImageSaved": "¡Imagen personalizada guardada! Estableciendo como cara...",
+    "customImageDone": "¡Listo! Tu cara personalizada se ha configurado.",
+    "removeCustomHint": "Mantén pulsada tu imagen personalizada para eliminarla de la vista previa de la app (permanecerá en el cubo hasta que subas otra).",
+    "playbackCountTitle": "Repeticiones de animación",
+    "playbackCountHint": "Elige de 1 a 1000 reproducciones, o 0 para reproducción ilimitada:",
+    "unlimited": "Ilimitado (0)",
+    "confirm": "Confirmar",
+    "cancel": "Cancelar",
+    "faces": {
+      "breakfast": "Desayuno",
+      "brushTeeth": "Cepillarse los dientes",
+      "studying": "Estudiando",
+      "grinding": "Trabajando duro",
+      "milkTea": "Té de burbujas",
+      "slackingOff": "Holgazaneando (Pez)",
+      "sleepy": "Somnolienta",
+      "eatingRice": "Comiendo arroz",
+      "hungry": "Hambrienta",
+      "happy": "Feliz",
+      "popcorn": "Palomitas",
+      "fellAsleep": "Dormida",
+      "fullyCharged": "Carga completa (Gafas de sol)"
+    }
+  },
+  "animationSelection": {
+    "title": "Selección de animaciones",
+    "viewOnlyBannerTitle": "Modo de solo lectura temporal",
+    "viewOnlyBannerMessage": "El cubo parece reproducir siempre la primera franja (Amanecer) en vez de basarse en la hora actual. Hasta comprender la causa, el guardado está desactivado para evitar alterar tu configuración.",
+    "slotConstraint": "* 1 a 5 animaciones por franja horaria",
+    "syncFromDevice": "Sincronizar desde dispositivo",
+    "restoreDefaultTimes": "Restaurar horas predeterminadas",
+    "repairScheduleNotice": "A este cubo le faltan parámetros de horario. Restaura las horas predeterminadas para habilitar la edición conservando tus selecciones.",
+    "save": "Guardar",
+    "saved": "Guardado correctamente",
+    "timeSlots": {
+      "dawn": "Amanecer (06:00 - 08:00)",
+      "morning": "Mañana (08:00 - 12:00)",
+      "noon": "Mediodía (12:00 - 14:00)",
+      "afternoon": "Tarde (14:00 - 18:00)",
+      "evening": "Anochecer (18:00 - 20:00)",
+      "night": "Noche (20:00 - 22:00)"
+    }
+  },
+  "wakeAlarm": {
+    "title": "Alarma de despertar",
+    "syncNotice": "* Las alarmas se sincronizan con el dispositivo inmediatamente",
+    "syncFromDevice": "Sincronizar desde dispositivo",
+    "add": "Añadir",
+    "newAlarmTitle": "Nueva alarma",
+    "editAlarmTitle": "Editar alarma",
+    "timeLabel": "Hora",
+    "repeatLabel": "Repetir",
+    "everyDay": "Todos los días",
+    "alarmName": "Nombre de alarma",
+    "alarmNamePlaceholder": "Toca para configurar",
+    "danmakuPhrase": "Frase de Danmaku",
+    "danmakuPhrasePlaceholder": "Toca para configurar",
+    "useNextAlarmFromClock": "Usar próxima alarma del Reloj",
+    "deleteAlarm": "Eliminar alarma",
+    "confirm": "Confirmar",
+    "cancel": "Cancelar",
+    "days": {
+      "monday": "L",
+      "tuesday": "M",
+      "wednesday": "X",
+      "thursday": "J",
+      "friday": "V",
+      "saturday": "S",
+      "sunday": "D"
+    }
+  },
+  "danmaku": {
+    "title": "Danmaku",
+    "saved": "Guardado",
+    "saving": "Guardando...",
+    "saveNotice": "* Tras editar los ajustes de danmaku, los cambios se guardan automáticamente.",
+    "scrollLyrics": "Desplazar letras mientras suena música",
+    "scrollLyricsNotice": "* Solo funciona con ciertas aplicaciones de música (no compatible con Spotify o YT Music)",
+    "useLargeText": "Usar texto danmaku grande",
+    "customDanmaku": "Danmaku personalizado",
+    "notCreated": "No creado",
+    "create": "Crear",
+    "edit": "Editar",
+    "defaultPhrases": {
+      "drinkWater": "Recuerda beber agua",
+      "sleepEarly": "Duérmete temprano",
+      "lightsAndLock": "Apaga las luces y cierra con llave"
+    }
+  },
+  "systemSettings": {
+    "title": "Ajustes del sistema",
+    "readVersionNotice": "* Lee la versión real directamente del dispositivo",
+    "syncFromDevice": "Sincronizar desde dispositivo",
+    "systemVersion": "Versión del sistema",
+    "activeTheme": "Tema activo",
+    "switchThemeWarning": "* Cambiar de tema flashea el firmware (~2MB) — no interrumpas el proceso",
+    "inUse": "En uso",
+    "switch": "Cambiar",
+    "cubeClock": "Reloj del cubo",
+    "openBluetoothSettings": "Abrir ajustes de Bluetooth",
+    "clockSyncHint": "Conecta los auriculares en los ajustes de Bluetooth de Android para sincronizar el reloj del cubo con tu teléfono."
+  },
+  "settings": {
+    "title": "Ajustes",
+    "language": "IDIOMA / LANGUAGE",
+    "shareDeviceData": "COMPARTIR DATOS DEL DISPOSITIVO",
+    "shareDeviceDataNotice": "* Solo lectura. Copia los archivos de configuración del cubo al portapapeles para compartirlos en un reporte de error. Nada es modificado en el dispositivo.",
+    "copyDeviceData": "Copiar datos del dispositivo",
+    "dataCopiedToast": "Datos del dispositivo copiados al portapapeles",
+    "changeDevice": "Cambiar dispositivo",
+    "forgetDevice": "Olvidar dispositivo"
+  },
+  "errors": {
+    "bluetoothUnsupported": "Bluetooth de baja energía (BLE) no es compatible con este dispositivo.",
+    "bluetoothPoweredOff": "El Bluetooth está apagado. Por favor, actívalo.",
+    "connectionFailed": "No se pudo conectar al cubo. Verifica que la tapa trasera esté abierta y vuelve a intentarlo.",
+    "clockSyncFailed": "No se pudo sincronizar el reloj. Conecta los auriculares desde los ajustes del sistema."
+  }
+}
