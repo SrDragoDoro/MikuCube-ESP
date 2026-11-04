@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ApkPatcher")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+872778df718390e51f25ded6eb3cce9344278321")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+821cad88b2a3b8f45490ab5d6b83ea26cff30d3b")]
 [assembly: System.Reflection.AssemblyProductAttribute("ApkPatcher")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ApkPatcher")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
